@@ -1,0 +1,832 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SDQ Project 2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        ul.horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.horizontal li {
+            float: left;
+        }
+
+        ul.horizontal li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.horizontal li a:hover:not(.active) {
+            background-color: cyan;
+            color: black;
+        }
+
+        ul.horizontal li a.active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky-top">
+        <div class="w3-col m8">
+            <ul class="horizontal">
+                <li><a class="navbar-brand" href="index.html">SDQ Project 2</a></li>
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="testScope.html">Test Scope</a></li>
+                <li><a href="testPlan.html">Test Plan & Integration</a></li>
+                <li><a class="active" href="validationTest.html">Validation Tests</a></li>
+                <li><a href="complete.html">Full Text</a></li>
+                <li class="rightli" style="float:right"><a href="#">Akash, Aman and Swanand</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+
+        <main class="container">
+
+            <h1 style="text-align: center; padding: .5em 0 .75em 0"><b><u>Car Service Record Management System
+                    </u></b></h1>
+            <h2>Validation Tests</h2>
+
+            <h3><u>Test Procedure</u></h3>
+            <p>We&apos;ll schedule our validating testing efforts to ensure we&apos;re checking out the final, shippable
+                product once development is finished. In order to guarantee that the system&apos;s many parts work
+                together smoothly, we&apos;ll put them through their tests during Validation Testsing. Certain features
+                will be tried that could not be tested before all required resources were available.</p>
+            Certain non-functional criteria, such as performance, load bearing properties, and security, will also be
+            tested. The testing methods that will be used for our validation checks are:
+            <ul>
+                <li>
+                    Functional Testing
+                </li>
+                <li>
+                    Load Testing
+                </li>
+                <li>
+                    Performance Testing
+                </li>
+            </ul>
+
+            <h3><u>Test Cases</u></h3>
+            <p><strong>Functional Testing</strong></p>
+            <p>We will validate the system by testing all of its functionality and checking that all of its requirements
+                have been implemented as specified.</p>
+
+            <style type="text/css">
+                .tg {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+
+                .tg td {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg th {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg .tg-1wig {
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-av16 {
+                    color: #212529;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-0lax {
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-w1dh {
+                    color: #212529;
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: top
+                }
+            </style>
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case #</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case Description</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Expected
+                                Results</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-1</span>
+                        </td>
+                        <td class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Account
+                                Creation</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Following
+                                account should be created.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">General
+                                user account</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Automobile
+                                manufacturer’s account.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Insurance
+                                company’s account</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Repair
+                                shop owner’s acount</span></td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">All
+                                accounts created by testers should have access to authenticated resources. There
+                                shouldn't be any way to create several accounts.</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-2</span>
+                        </td>
+                        <td class="tg-w1dh"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">User
+                                Account Management:</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Users
+                                should be able to perform following account management activities:</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                user should be able to update their details.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">View
+                                details of different cars by entering the car registration number.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Users
+                                should be able to accept or reject any request made to their profile. </span></td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">If
+                                testers have legitimate accounts, they should be able to access the system and carry out
+                                the specified actions without issue.</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-3</span>
+                        </td>
+                        <td class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Automobile
+                                manufacturer’s account</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Manufacturer
+                                should be able to perform following activities.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Can
+                                enter the car registration number and then will be able to see the details regarding the
+                                parts that are worn out the most.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">They
+                                should be able to login and update their details.</span></td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">It
+                                is expected that testers will be able to perform these tasks with no problems using
+                                valid company credentials.</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-4</span>
+                        </td>
+                        <td class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Insurance
+                                company’s account</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Insurance
+                                company should be able to perform the following activities:</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">
+                                They should be able to see the information about the car in order to get the estimate
+                                about the insurance premium.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">The
+                                user should be able to login and update their details.</span></td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">It
+                                is expected that testers will be able to perform these tasks with no problems using
+                                valid company credentials.</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-5</span>
+                        </td>
+                        <td class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Repair
+                                shop owners account</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Manufacturer
+                                should be able to perform following activities.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">They
+                                can see the data associated with the vehicle.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">They
+                                can modify the data of the vehicle parts.</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">They
+                                should be able to login and also update their details.</span></td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">It
+                                is expected that testers will be able to perform these tasks with no problems using
+                                valid company credentials.</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-6</span>
+                        </td>
+                        <td class="tg-w1dh"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Security</span><br><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">All
+                                users must enter valid credentials to access the web application.</span></td>
+                        <td class="tg-av16"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Testers
+                                should NOT be able to login without valid accounts.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <p><strong>Performance Testing</strong></p>
+            <p>We will use performance testing to check that the system is functioning properly.</p>
+
+            <style type="text/css">
+                .tg {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+
+                .tg td {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg th {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg .tg-1wig {
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-0lax {
+                    text-align: left;
+                    vertical-align: top
+                }
+            </style>
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case #</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case Description</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Expected
+                                Results</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-7</span>
+                        </td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">It
+                                is carried out to guarantee that response and latency times are within acceptable
+                                parameters (Two seconds).</span></td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Both
+                                the response time and latency should be below the targets set out in the design
+                                document.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <p><strong>Load Testing</strong></p>
+            <p>We will use load testing to make sure the system behaves as intended under stress and that it will
+                gracefully shut down if it cannot handle the demand.</p>
+
+            <style type="text/css">
+                .tg {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+
+                .tg td {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg th {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg .tg-1wig {
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-0lax {
+                    text-align: left;
+                    vertical-align: top
+                }
+            </style>
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case #</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case Description</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Expected
+                                Results</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">VTC-8</span>
+                        </td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">The
+                                purpose of load testing is to verify that the system behaves as intended and fails in a
+                                controlled manner when subjected to a demanding workload.</span></td>
+                        <td class="tg-0lax"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">The
+                                system's performance should match expectations.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <h3><u>Traceability Matrix</u></h3>
+            <p><strong>Functional Requirement</strong></p>
+
+
+            <style type="text/css">
+                .tg {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+
+                .tg td {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg th {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg .tg-1wig {
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-l2bf {
+                    background-color: #FFF;
+                    color: #222;
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-tsok {
+                    background-color: #FFF;
+                    color: #222;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-mfw7 {
+                    background-color: #FFF;
+                    color: #212529;
+                    text-align: left;
+                    vertical-align: top
+                }
+            </style>
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Req#</span>
+                        </th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Requirement
+                                Description</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-1</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                system should be able to allow general users, admins, car insurance companies,
+                                workshops, and car manufacturer companies to login and sign up.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-1,
+                                FTC-1, FTC-2, FTC-3, FTC -14</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-2</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">General
+                                users should be able to update their personal information.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-2,
+                                FTC-1, FTC-2, FTC-3, FTC-14</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-3</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">General
+                                users should be able to request car information using the car registration number and
+                                owner details.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-2</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-4</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">General
+                                users should be able to accept or reject any request made to their profile, either for
+                                car information or personal information, from general users or car insurance
+                                companies.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-2</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-5</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                system should allow workshops to create, update, or delete maintenance records created
+                                by them.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-5,
+                                FTC-1, FTC-2, FTC-3, FTC-14</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-6</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                system should be able to provide car manufacturers with all the car service records
+                                related to their brand and model.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-3</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-7</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                system should be able to generate a PDF of the report so that it can be viewed
+                                offline.</span></td>
+                        <td class="tg-l2bf"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">-</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-8</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">Admins
+                                should have the ability to register, authorize, or revoke the access of any kind of
+                                user.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FTC-11,
+                                FTC-1, FTC-2, FTC-3, FTC-15</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-9</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                system should be able to notify users about the upcoming service date of their
+                                cars.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">–</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FR-10</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                system should allow insurance companies to request a general user for all their car and
+                                personal information.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-4</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <p><strong>Non-Functional Requirement</strong></p>
+
+            <style type="text/css">
+                .tg {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+
+                .tg td {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg th {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg .tg-1wig {
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-tsok {
+                    background-color: #FFF;
+                    color: #222;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .tg .tg-mfw7 {
+                    background-color: #FFF;
+                    color: #212529;
+                    text-align: left;
+                    vertical-align: top
+                }
+            </style>
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Req#</span>
+                        </th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Requirement
+                                Description</span></th>
+                        <th class="tg-1wig"><span
+                                style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                Case</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-1</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                system must be scalable in order to support an expanding user base.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-7,
+                                VTC-8, FTC-5</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-2</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">Multiple
+                                users looking for information about the same car should be supported by the
+                                system.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FTC-2</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-3</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">Different
+                                browsers should be able to access the website.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">FTC-16</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-4</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">To
+                                enable quick access, the system should store the data in the cloud.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">–</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-5</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">To
+                                provide a quick website load time, numerous servers spread across various locations are
+                                required.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-7,
+                                VTC-8</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-6</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">To
+                                ensure that no data is lost, there should be a data backup.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">–</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-7</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">
+                                The appropriate actions should be taken to guarantee the security of data
+                                servers.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-6,
+                                FTC-4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-8</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">Each
+                                page of a website should load in under two seconds.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-8</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">NFR-9</span>
+                        </td>
+                        <td class="tg-mfw7"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:#FFF">The
+                                website should be accessible 99.9% of the time.</span></td>
+                        <td class="tg-tsok"><span
+                                style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF">VTC-7,
+                                VTC-8</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+
+            <div style="display: flex; justify-content: space-between">
+                <a href="testPlan.html">Previous: Test Plan & Integration</a>
+                <a href="complete.html">Next: Complete</a>
+            </div>
+
+        </main>
+</body>
+
+</html>

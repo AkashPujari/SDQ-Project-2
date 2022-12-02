@@ -1,0 +1,739 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SDQ Project 2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        ul.horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.horizontal li {
+            float: left;
+        }
+
+        ul.horizontal li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.horizontal li a:hover:not(.active) {
+            background-color: cyan;
+            color: black;
+        }
+
+        ul.horizontal li a.active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky-top">
+        <div class="w3-col m8">
+            <ul class="horizontal">
+                <li><a class="navbar-brand" href="index.html">SDQ Project 2</a></li>
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="testScope.html">Test Scope</a></li>
+                <li><a class="active" href="testPlan.html">Test Plan & Integration</a></li>
+                <li><a href="validationTest.html">Validation Tests</a></li>
+                <li><a href="complete.html">Full Text</a></li>
+                <li class="rightli" style="float:right"><a href="#">Akash, Aman and Swanand</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+
+        <main class="container">
+
+            <h1 style="text-align: center; padding: .5em 0 .75em 0"><b><u>Car Service Record Management System
+                    </u></b></h1>
+            <h3>Test Plan & Integration</h3>
+            <br>
+            <div class="col-md-12">
+
+                <p>Our system makes use of a three-layered N-Tier architecture. In this case, lower levels are acting as
+                    a support system for layers above them. Because of the reliance this architecture creates,
+                    components in lower layers must be constructed before those in higher layers. In light of these
+                    circumstances, we will divide the system build process into three separate phases, each of which
+                    corresponds to a different layer of the system architecture.&nbsp;</p>
+                <p>Separating testing into distinct phases will improve the process as a whole and ensure that it grows
+                    and evolves in conjunction with the system. It will also open the door to automation, which can
+                    eventually result in continuous integration, in which every change is incorporated instantly via an
+                    automated pipeline that also handles building, packaging, and testing. That way, any problems with
+                    integration may be found and fixed before the code is even written.</p>
+                <p>Following this methodology, we will begin our test process at the lowest layer&mdash;the database or
+                    data access layer&mdash;move up to the application programming interface layer, then go on to the
+                    presentation layer, also known as the graphical user interface layer. We will be able to firm the
+                    foundations for higher levels by testing the lower ones first since we are following the route of
+                    dependency between these layers. The three build phases that we will test are as follows:</p>
+                <ul>
+                    <li>
+                        <p>&nbsp;Web application Layer: In the Presentation layer, we&apos;ll concentrate on the
+                            GUI&apos;s usability and accessibility. In order to make sure the system meets the
+                            non-functional criteria, we would additionally test its performance.</p>
+                    </li>
+                    <li>
+                        <p>&nbsp;Data base layer: We will concentrate on testing data access objects in the data access
+                            layer to make sure they are operating as intended. We would also concentrate on evaluating
+                            the database&apos;s performance and security features.</p>
+                    </li>
+                    <li>
+                        <p>&nbsp;Backend Layer: Testing efforts will be concentrated on functional and security testing
+                            to make sure APIs are secure and operating in accordance with specifications. More attention
+                            must be paid to security since APIs will be made accessible to the outside world through a
+                            programming interface.</p>
+                    </li>
+                </ul>
+                <br>
+                <h3><u>Database Phase</u></h3>
+                <p>Database layer is not covered by unit testing so it is important to include this because the bugs
+                    that were not caught during unit testing will be discovered here. Since it is the layer underneath
+                    all others, the data access layer&apos;s health has a direct bearing on the health of the other
+                    layers. After a lengthy integration process with many levels, it may be difficult to find any
+                    persisting flaws. In this phase we have two different components that we need to test. The following
+                    four points will serve as the basis for all of our test cases:</p>
+                <p>Data Mapping: Make sure there is a one-to-one correspondence between the fields in the data access
+                    layer and their corresponding fields in the database.</p>
+                <p>Data Integrity: There should be no inconsistencies in the data between different database
+                    transactions.</p>
+                <p>ACID Properties: Atomicity, Consistency, Isolation, and Durability are its abbreviated meanings.
+                    These four conditions must be true for every database transaction.</p>
+
+                <style type="text/css">
+                    .tg {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                    }
+
+                    .tg td {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg th {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: normal;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg .tg-1wig {
+                        font-weight: bold;
+                        text-align: left;
+                        vertical-align: top
+                    }
+
+                    .tg .tg-av16 {
+                        color: #212529;
+                        text-align: left;
+                        vertical-align: top
+                    }
+                </style>
+                <table class="tg">
+                    <thead>
+                        <tr>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case #</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case Description</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Expected
+                                    Results</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-1</span>
+                            </td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Schema
+                                    Testing</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Schema
+                                    testing is done so that the database and data access layer have the same mapping.
+                                </span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">There
+                                    are queries that can be created to retrieve the schema and verify that it has been
+                                    defined appropriately and in accordance with the requirements. In addition, you can
+                                    employ automated testing and validation with the help of tools like Ant.</span></td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Entity
+                                    Relationship Diagram (ERD) and Data Model definitions should correspond with
+                                    schema.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-2</span>
+                            </td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Stored
+                                    Procedure Testing</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    DML operations that are carried out by a database in the course of a transaction are
+                                    carried out by stored procedures, which are user-defined processes within the
+                                    database.</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">White
+                                    box testing is a method for evaluating stored procedures in which each stored
+                                    procedure is ran with a predefined set of input values and the results are compared
+                                    to the expected values. </span></td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Output
+                                    values should match the expected values for each stored procedure.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-3</span>
+                            </td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Database
+                                    Definition Testing</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Testing
+                                    database definitions guarantees that all database tables and fields have been
+                                    properly specified with the right data types and correct lengths, and that any
+                                    foreign key restrictions, keys, and indexes have also been properly
+                                    defined.</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    Entity Relationship Diagram can be compared to the specification by writing queries
+                                    against the database and retrieving the schema objects.</span></td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    definitions in the Entity Relationship Diagram should be reflected in the output
+                                    values.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-4</span>
+                            </td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Security
+                                    Testing</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Database
+                                    access is restricted to authorized users, and the level of access is verified by
+                                    security testing. Also, we make sure the roles in the database are properly
+                                    specified and that only authorized individuals are given access to the
+                                    database.</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    database can be queried to retrieve information about the roles and users, which can
+                                    then be checked against some external source.</span></td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">All
+                                    database established roles, users, and accesses must be compliant with the
+                                    requirements.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-5</span>
+                            </td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Load
+                                    Testing</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">A
+                                    database, being an integral part of our application, may easily become a bottleneck.
+                                    Load testing can ensure</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Test
+                                    automation is key for load testing. It is possible to execute database transaction
+                                    simulations against the database in order to simulate user load.</span></td>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Database
+                                    health under stress can be understood by preventing any failed transactions and
+                                    tracking critical host metrics like CPU, RAM, page file consumption, and other
+                                    database metrics.</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+                <h3><u>Backend Phase</u></h3>
+                <p><strong>Test Procedure</strong></p>
+                The validation of the functional requirements depends on this layer because it contains all of the
+                business logic. The majority of the functional criteria may actually be tested in part
+                programmatically using the APIs. Each test case run on the Backend should at the very least be
+                compared to the specification for the following:
+                <ul>
+                    <li>
+                        Correct HTTP Response Headers
+                    </li>
+                    <li>
+                        Correct HTTP Status Code
+                    </li>
+                    <li>
+                        Correct HTTP Response Payload
+                    </li>
+                </ul>
+                During this build, we will test focus on following testing methodologies as part of our Backend
+                testing strategy:
+                <ul>
+                    <li>
+                        <strong>Functional Testing:</strong> To ensure all functionality has been implemented as
+                        intended
+                    </li>
+                    <li>
+                        <strong>Security Testing:</strong> To ensure authentication and authorization has been
+                        properly implemented
+                    </li>
+                    <li>
+                        <strong>Performance Testing:</strong> To ensure we meet the performance SLAs as specified
+                    </li>
+                    <li>
+                        <strong>Load Testing:</strong> To ensure we continue to function within SLAs when under load
+
+                    </li>
+                </ul>
+
+                <p><strong>Test Cases</strong></p>
+                <p>We have split the test cases for Backend testing according to the goal of a particular strategy.</p>
+
+                <p><strong>Functional Testing</strong></p>
+                <p>Functional testing often entails verifying that APIs are operating in accordance with specification
+                    and that service contracts are accurately described. The following list of test cases will be used
+                    to run all api operations:</p>
+
+                <style type="text/css">
+                    .tg {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                    }
+
+                    .tg td {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg th {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: normal;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg .tg-rvay {
+                        background-color: #FFF;
+                        color: #212529;
+                        font-weight: bold;
+                        text-align: left;
+                        vertical-align: top
+                    }
+
+                    .tg .tg-ktyi {
+                        background-color: #FFF;
+                        text-align: left;
+                        vertical-align: top
+                    }
+
+                    .tg .tg-mfw7 {
+                        background-color: #FFF;
+                        color: #212529;
+                        text-align: left;
+                        vertical-align: top
+                    }
+                </style>
+                <table class="tg">
+                    <thead>
+                        <tr>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case #</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case Description</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Expected
+                                    Results</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-6</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Positive
+                                    Testing</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">It
+                                    is done to make sure that operations return the desired results given the
+                                    input.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    results from the API should match the specs.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-7</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Edge
+                                    Case Testing</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">It's
+                                    done to make sure that, even when given unusual parameters, procedures still provide
+                                    the desired results. There should be testing for both near- and far-edge
+                                    scenarios.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    results from the API should match the specs.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-8</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Negative
+                                    Testing - Valid Input </span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    purpose of this procedure is to guarantee that operations will fail when given valid
+                                    input.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    results from the API should match the specs.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-9</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Negative
+                                    Testing - Invalid Input</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">This
+                                    is done so that when an operation encounters an invalid input, it can gracefully
+                                    exit.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">The
+                                    results from the API should match the specs.</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                <p><strong>Security Testing:</strong></p>
+                <p>We will do security testing to check if the APIs are safe and properly integrate authentication and
+                    authorization based on user roles. There should be no way for an unauthorized user to utilize an
+                    API.</p>
+
+
+
+                <style type="text/css">
+                    .tg {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                    }
+
+                    .tg td {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg th {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: normal;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg .tg-rvay {
+                        background-color: #FFF;
+                        color: #212529;
+                        font-weight: bold;
+                        text-align: left;
+                        vertical-align: top
+                    }
+
+                    .tg .tg-ktyi {
+                        background-color: #FFF;
+                        text-align: left;
+                        vertical-align: top
+                    }
+
+                    .tg .tg-mfw7 {
+                        background-color: #FFF;
+                        color: #212529;
+                        text-align: left;
+                        vertical-align: top
+                    }
+                </style>
+                <table class="tg">
+                    <thead>
+                        <tr>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case #</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case Description</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Expected
+                                    Results</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-10</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Security
+                                    Principles</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Make
+                                    sure the application programming interface follows all applicable security best
+                                    practices when being developed.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Positive
+                                    - Verify that the API appropriately reacts to the specified levels of
+                                    authorization.</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Negative
+                                    - Make sure the API always rejects connections from unknown sources.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-11</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Role
+                                    Permissions</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">It
+                                    is done so that users in the correct roles have access to the appropriate
+                                    resources.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">If
+                                    a user attempts to access an endpoint that is not within their scope of permissions,
+                                    the API should reject the request.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-12</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Access
+                                    Control Policies</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Rate
+                                    limiting and throttles are two examples of access control policies that can be
+                                    tested in this way.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">It
+                                    is important to apply access control policies as specified.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-13</span>
+                            </td>
+                            <td class="tg-rvay"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Protocol</span><br><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">This
+                                    is done to ensure proper implementation of communication protocols.</span></td>
+                            <td class="tg-mfw7"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">Always
+                                    use TLS 1.2 and HTTPS securely, as recommended.</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+                <h3><u>Presentation Phase</u></h3>
+                <p><strong>Test Procedure</strong></p>
+                <p>We will be focusing our testing efforts on the presentation layer to ensure that the system&apos;s
+                    accessibility and usability features are built according to the specification and needs. Here are
+                    the main points we&apos;ll be focusing on: Visual design, functionality, performance, usability, and
+                    security are all important considerations.</p>
+
+                <style type="text/css">
+                    .tg {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                    }
+
+                    .tg td {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg th {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: normal;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+
+                    .tg .tg-1wig {
+                        font-weight: bold;
+                        text-align: left;
+                        vertical-align: top
+                    }
+
+                    .tg .tg-av16 {
+                        color: #212529;
+                        text-align: left;
+                        vertical-align: top
+                    }
+
+                    .tg .tg-0lax {
+                        text-align: left;
+                        vertical-align: top
+                    }
+                </style>
+                <table class="tg">
+                    <thead>
+                        <tr>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case #</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Test
+                                    Case Description</span></th>
+                            <th class="tg-1wig"><span
+                                    style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Expected
+                                    Results</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-14</span>
+                            </td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Mandatory
+                                    Fields</span></td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">All
+                                    mandatory fields should be clearly marked.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-15</span>
+                            </td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Data
+                                    Validation</span></td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">When
+                                    data is submitted improperly, all input fields should be validated and an
+                                    appropriate message displayed.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-16</span>
+                            </td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Theme
+                                    Consistency</span></td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">The
+                                    Theme, feel, and design of the screen should be consistent with the rest of the
+                                    screens in your program.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-17</span>
+                            </td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Loading
+                                    Animation</span></td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">The
+                                    loading animation should be present in all long-running transactions.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-av16"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#212529;background-color:transparent">FTC-18</span>
+                            </td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Help
+                                    &amp; Guide</span></td>
+                            <td class="tg-0lax"><span
+                                    style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">There
+                                    should be resources and guide available on website to explain how to use the
+                                    system</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+
+                <div style="display: flex; justify-content: space-between">
+                    <a href="testScope.html">Previous: Test Scope</a>
+                    <a href="validationTest.html">Next: Validation Tests</a>
+                </div>
+            </div>
+        </main>
+</body>
+
+</html>
